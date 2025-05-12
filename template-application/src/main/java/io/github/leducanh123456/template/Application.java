@@ -1,4 +1,4 @@
-package com.template;
+package io.github.leducanh123456.template;
 import org.springframework.boot.SpringApplication;
 
 public class Application {

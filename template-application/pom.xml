@@ -6,8 +6,8 @@
     <artifactId>template-application</artifactId>
     <version>1.0.0</version>
     <parent>
-        <groupId>com.template</groupId>
-        <artifactId>template</artifactId>
+        <groupId>io.github.leducanh123456</groupId>
+        <artifactId>aps-template</artifactId>
         <version>1.0.0</version>
     </parent>
     <properties>
