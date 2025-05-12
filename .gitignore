@@ -1,0 +1,136 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/application.yml
+!**/src/main/**/application.properties
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/application.yml
+!**/src/main/**/application.properties
+
+# IDEs
+## IntelliJ
+.idea/
+*.iml
+*.iws
+out/
+
+## Eclipse
+*.classpath
+*.project
+*.settings/
+bin/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+*.swp
+.sass-cache/
+*.swo
+
+# Logs
+logs/
+*.log
+
+# Spring Boot
+spring.log
+
+# Application runtime
+*.pid
+*.gz
+
+# Compiled class files
+*.class
+
+# Generated files
+*.war
+*.jar
+*.ear
+
+# Temp files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+
+# Docker
+docker-compose.override.yml
+docker-compose.local.yml
+docker-compose.dev.yml
+docker-compose.test.yml
+docker-compose.prod.yml
+.docker/
+.dockerignore
+
+# Kubernetes
+k8s/
+*.yaml
+*.yml
+
+# Lombok generated files
+.lombok/
+
+# Coverage
+.coverage/
+coverage.*
+*.lcov
+
+# Sonar
+.sonar/
+.report-task.txt
+
+# Node modules
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+yarn.lock
+.pnp.*
+.pnp
+
+# Misc
+*.seed
+*.pid.lock
+*.pid
+*.out
+*.bak
+
+# JetBrains IDEs
+.idea/
+*.iml
+.idea/*
+
+# VS Code
+.vscode/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+.idea/**
+
+# Windows specific
+*.lnk
+
+# Thrift generated files
+gen-java/
+gen-go/
+gen-nodejs/
+gen-python/
+
+# Swagger
+swagger-ui/
