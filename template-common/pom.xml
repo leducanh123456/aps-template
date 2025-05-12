@@ -6,7 +6,7 @@
     <parent>
         <groupId>io.github.leducanh123456</groupId>
         <artifactId>aps-template</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
     </parent>
 
     <artifactId>template-common</artifactId>

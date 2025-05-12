@@ -1,136 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>io.github.leducanh123456</groupId>
-    <artifactId>aps-template</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>template-application</module>
-        <module>template-common</module>
-    </modules>
-    <properties>
-        <java.version>21</java.version>
-        <lombok.version>1.18.38</lombok.version>
-        <mapstruct.version>1.6.3</mapstruct.version>
-        <org.javer.version>7.8.0</org.javer.version>
-        <streamex.version>0.8.3</streamex.version>
-        <auto-service.version>1.1.1</auto-service.version>
-        <hibernate-search.version>7.2.3.Final</hibernate-search.version>
-        <feign-jackson>12.4</feign-jackson>
-        <spring-cloud-starter-openfeign>4.2.0</spring-cloud-starter-openfeign>
-        <spring-cloud-dependencies>2024.0.0</spring-cloud-dependencies>
-    </properties>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
-    </parent>
-    <dependencyManagement>
-        <dependencies>
-
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version><!--$NO-MVN-MAN-VER$ -->
-                <scope>provided</scope>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
-            <dependency>
-                <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct</artifactId>
-                <version>${mapstruct.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.javers</groupId>
-                <artifactId>javers-core</artifactId>
-                <version>${org.javer.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>one.util</groupId>
-                <artifactId>streamex</artifactId>
-                <version>${streamex.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.google.auto.service</groupId>
-                <artifactId>auto-service</artifactId>
-                <version>${auto-service.version}</version>
-                <scope>provided</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.hibernate.search</groupId>
-                <artifactId>hibernate-search-mapper-orm</artifactId>
-                <version>${hibernate-search.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.openfeign</groupId>
-                <artifactId>feign-jackson</artifactId>
-                <version>${feign-jackson}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>{spring-cloud-starter-openfeign}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud-dependencies}</version>
-                <type>pom</type>
-            </dependency>
-
-        </dependencies>
-    </dependencyManagement>
-
-    <profiles>
-        <profile>
-            <id>local</id>
-            <properties>
-                <active.profile>local</active.profile>
-            </properties>
-<!--            <activation>-->
-<!--                <activeByDefault>true</activeByDefault>-->
-<!--            </activation>-->
-<!--            <repositories>-->
-<!--                <repository>-->
-<!--                    <id>nexus-mware-local</id>-->
-<!--                    <url>http://localhost:19803/repository/maven-public/</url>-->
-<!--                </repository>-->
-<!--            </repositories>-->
-<!--            <distributionManagement>-->
-<!--                <repository>-->
-<!--                    <id>nexus-mware-local-release</id>-->
-<!--                    <url>http://localhost:19803/repository/maven-releases/</url>-->
-<!--                </repository>-->
-<!--                <snapshotRepository>-->
-<!--                    <id>nexus-mware-local-snapshot</id>-->
-<!--                    <url>http://localhost:19803/repository/maven-snapshots/</url>-->
-<!--                </snapshotRepository>-->
-<!--            </distributionManagement>-->
-        </profile>
-        <profile>
-            <id>staging</id>
-            <properties>
-                <active.profile>staging</active.profile>
-            </properties>
-        </profile>
-        <profile>
-            <id>uat</id>
-            <properties>
-                <active.profile>uat</active.profile>
-            </properties>
-        </profile>
-    </profiles>
+<?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.leducanh123456</groupId>
+  <artifactId>aps-template</artifactId>
+  <version>1.0.2</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>template-application</module>
+    <module>template-common</module>
+  </modules>
+  <properties>
+    <java.version>21</java.version>
+    <lombok.version>1.18.38</lombok.version>
+    <mapstruct.version>1.6.3</mapstruct.version>
+    <org.javer.version>7.8.0</org.javer.version>
+    <streamex.version>0.8.3</streamex.version>
+    <auto-service.version>1.1.1</auto-service.version>
+    <hibernate-search.version>7.2.3.Final</hibernate-search.version>
+    <feign-jackson>12.4</feign-jackson>
+    <spring-cloud-starter-openfeign>4.2.0</spring-cloud-starter-openfeign>
+    <spring-cloud-dependencies>2024.0.0</spring-cloud-dependencies>
+  </properties>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.4.5</version>
+    <relativePath/>
+    <!-- lookup parent from repository -->
+  </parent>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+        <!--$NO-MVN-MAN-VER$ -->
+        <scope>provided</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.mapstruct/mapstruct -->
+      <dependency>
+        <groupId>org.mapstruct</groupId>
+        <artifactId>mapstruct</artifactId>
+        <version>${mapstruct.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.javers</groupId>
+        <artifactId>javers-core</artifactId>
+        <version>${org.javer.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>one.util</groupId>
+        <artifactId>streamex</artifactId>
+        <version>${streamex.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.auto.service</groupId>
+        <artifactId>auto-service</artifactId>
+        <version>${auto-service.version}</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate.search</groupId>
+        <artifactId>hibernate-search-mapper-orm</artifactId>
+        <version>${hibernate-search.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.github.openfeign</groupId>
+        <artifactId>feign-jackson</artifactId>
+        <version>${feign-jackson}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-openfeign</artifactId>
+        <version>{spring-cloud-starter-openfeign}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud-dependencies}</version>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <profiles>
+    <profile>
+      <id>local</id>
+      <properties>
+        <active.profile>local</active.profile>
+      </properties>
+      <!--            <activation>-->
+      <!--                <activeByDefault>true</activeByDefault>-->
+      <!--            </activation>-->
+      <!--            <repositories>-->
+      <!--                <repository>-->
+      <!--                    <id>nexus-mware-local</id>-->
+      <!--                    <url>http://localhost:19803/repository/maven-public/</url>-->
+      <!--                </repository>-->
+      <!--            </repositories>-->
+      <!--            <distributionManagement>-->
+      <!--                <repository>-->
+      <!--                    <id>nexus-mware-local-release</id>-->
+      <!--                    <url>http://localhost:19803/repository/maven-releases/</url>-->
+      <!--                </repository>-->
+      <!--                <snapshotRepository>-->
+      <!--                    <id>nexus-mware-local-snapshot</id>-->
+      <!--                    <url>http://localhost:19803/repository/maven-snapshots/</url>-->
+      <!--                </snapshotRepository>-->
+      <!--            </distributionManagement>-->
+    </profile>
+    <profile>
+      <id>staging</id>
+      <properties>
+        <active.profile>staging</active.profile>
+      </properties>
+    </profile>
+    <profile>
+      <id>uat</id>
+      <properties>
+        <active.profile>uat</active.profile>
+      </properties>
+    </profile>
+  </profiles>
 </project>
